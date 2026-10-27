@@ -1,0 +1,4 @@
+COLOR_PRIMARIO = "#1F4E79"
+COLOR_FONDO = "#F4F6F8"
+FUENTE = ("Segoe UI", 10)
+FUENTE_TITULO = ("Segoe UI", 14, "bold")

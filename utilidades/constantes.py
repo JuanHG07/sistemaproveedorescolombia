@@ -1,0 +1,10 @@
+ADMIN = "Administrador"
+TRADICIONAL = "Tradicional"
+ESPORADICO = "Esporadico"
+TIPOS_USUARIO = (ADMIN, TRADICIONAL, ESPORADICO)
+
+ACTIVO = "A"
+INACTIVO = "I"
+ESTADOS = (ACTIVO, INACTIVO)
+
+CARPETA_REPORTES = "reportes_generados"
