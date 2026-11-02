@@ -10,4 +10,4 @@ class Producto:
     descripcion: Optional[str] = None
     unidad_medida: str = ""
     id_categoria: Optional[int] = None
-    estado: str = "Activo"       
+    estado: str = "A"       
