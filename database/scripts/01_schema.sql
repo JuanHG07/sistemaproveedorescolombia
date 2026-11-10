@@ -1,4 +1,3 @@
--- Requiere MySQL 8.0.16+ (CHECK se aplica desde esa version)
 CREATE DATABASE IF NOT EXISTS proveedores_db
     CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE proveedores_db;
