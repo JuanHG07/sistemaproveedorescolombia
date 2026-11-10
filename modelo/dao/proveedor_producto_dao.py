@@ -42,3 +42,12 @@ class ProveedorProductoDAO(BaseDAO):
         return self._ejecutar(
             "DELETE FROM proveedor_producto WHERE id_proveedor = %s AND id_producto = %s",
             (id_proveedor, id_producto))
+
+    def listar_detallado(self) -> list:
+        sql = ("SELECT pp.id_proveedor, pp.id_producto, pr.razon_social AS proveedor, "
+               "p.codigo, p.nombre AS producto, pp.precio_unitario, pp.dias_entrega "
+               "FROM proveedor_producto pp "
+               "JOIN proveedor pr ON pr.id_proveedor = pp.id_proveedor "
+               "JOIN producto p ON p.id_producto = pp.id_producto "
+               "ORDER BY pr.razon_social, p.nombre")
+        return self._consultar(sql)

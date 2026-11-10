@@ -18,7 +18,7 @@ class AuthControlador(BaseControlador):
 
     def login(self, username, clave):
         def accion():
-            if Sesion.usuario is not None: 
+            if Sesion.usuario is not None:
                 self.logout()
             nombre = v.texto(username, "usuario", 50)
             if not clave:
@@ -39,5 +39,5 @@ class AuthControlador(BaseControlador):
             try:
                 self.bitacora.registrar_salida(Sesion.id_bitacora)
             except (Error, ConnectionError):
-                pass   
+                pass
         Sesion.cerrar()

@@ -1,7 +1,7 @@
 class Sesion:
-    usuario = None       
-    tipo = None          
-    id_bitacora = None   
+    usuario = None
+    tipo = None
+    id_bitacora = None
 
     @classmethod
     def iniciar(cls, usuario, tipo, id_bitacora):

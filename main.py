@@ -1,4 +1,3 @@
-"""Punto de entrada de la aplicacion."""
 import tkinter as tk
 from vista.login_vista import LoginVista
 

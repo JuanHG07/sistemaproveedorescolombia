@@ -3,7 +3,6 @@ from modelo.dao.base_dao import BaseDAO
 
 class ConsultaDAO(BaseDAO):
 
-    # ---------------- JOIN ----------------
     def proveedores_con_ubicacion(self) -> list:
         sql = ("SELECT d.nombre AS departamento, c.nombre AS ciudad, pr.nit, "
                "pr.razon_social, pr.telefono "
@@ -35,7 +34,6 @@ class ConsultaDAO(BaseDAO):
                "ORDER BY d.nombre, c.nombre")
         return self._consultar(sql)
 
-    # ---------------- Subconsultas ----------------
     def productos_con_precio_sobre_promedio(self) -> list:
         sql = ("SELECT p.codigo, p.nombre, p.unidad_medida "
                "FROM producto p "

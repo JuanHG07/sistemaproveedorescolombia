@@ -3,7 +3,7 @@ from typing import Optional
 
 
 @dataclass
-class Ciudad:
-    id_ciudad: Optional[int] = None
+class Categoria:
+    id_categoria: Optional[int] = None
     nombre: str = ""
-    id_departamento: Optional[int] = None
+    descripcion: Optional[str] = None

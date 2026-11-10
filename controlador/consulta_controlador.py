@@ -29,7 +29,7 @@ class ConsultaControlador(BaseControlador):
                 raise ErrorNegocio("Consulta no reconocida.")
             titulo, funcion, etiqueta = self._consultas[clave]
             filas = funcion(v.entero_no_negativo(parametro, etiqueta)) if etiqueta else funcion()
-            claves = list(filas[0].keys()) if filas else []   
+            claves = list(filas[0].keys()) if filas else []
             return {"titulo": titulo,
                     "encabezados": [k.replace("_", " ").capitalize() for k in claves],
                     "filas": filas}

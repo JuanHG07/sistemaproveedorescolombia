@@ -4,7 +4,7 @@ from modelo.dto.categoria import Categoria
 
 
 class CategoriaDAO(BaseDAO):
-    _COLS = "id_categoria, nombre, descripcion"   # constante propia, nunca datos del usuario
+    _COLS = "id_categoria, nombre, descripcion"
 
     def insertar(self, c: Categoria) -> int:
         sql = "INSERT INTO categoria (nombre, descripcion) VALUES (%s, %s)"

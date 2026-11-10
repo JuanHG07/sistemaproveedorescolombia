@@ -5,7 +5,6 @@ from utilidades.errores import ErrorNegocio
 
 
 def texto(valor, campo, maximo, obligatorio=True):
-    """Devuelve el texto sin espacios sobrantes, o None si es opcional y viene vacío."""
     t = "" if valor is None else str(valor).strip()
     if not t:
         if obligatorio:
@@ -17,7 +16,6 @@ def texto(valor, campo, maximo, obligatorio=True):
 
 
 def entero_positivo(valor, campo):
-    """Para ids que vienen de un combo."""
     try:
         n = int(valor)
     except (TypeError, ValueError):
@@ -28,7 +26,6 @@ def entero_positivo(valor, campo):
 
 
 def entero_opcional(valor):
-    """Para filtros de reportes: vacío/0/no numérico -> None (sin filtro)."""
     try:
         n = int(valor)
     except (TypeError, ValueError):
@@ -38,7 +35,7 @@ def entero_opcional(valor):
 
 def numero_no_negativo(valor, campo):
     try:
-        n = float(str(valor).strip().replace(",", "."))   # acepta coma decimal
+        n = float(str(valor).strip().replace(",", "."))
     except ValueError:
         raise ErrorNegocio(f"'{campo}' debe ser un número.")
     if not math.isfinite(n) or n < 0:

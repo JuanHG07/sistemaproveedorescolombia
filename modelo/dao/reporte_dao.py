@@ -1,7 +1,7 @@
 from modelo.dao.base_dao import BaseDAO
 
 
-class ReporteDAO(BaseDAO):  
+class ReporteDAO(BaseDAO):
     _ESTADO_TXT = "CASE {alias}.estado WHEN 'A' THEN 'Activo' ELSE 'Inactivo' END"
 
     def _con_filtros(self, select, filtros, cola):

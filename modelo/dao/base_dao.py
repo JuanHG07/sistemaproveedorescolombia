@@ -9,7 +9,7 @@ class BaseDAO:
         try:
             cursor.execute(sql, params)
             filas = cursor.fetchall()
-            con.commit() 
+            con.commit()
             return filas
         finally:
             cursor.close()

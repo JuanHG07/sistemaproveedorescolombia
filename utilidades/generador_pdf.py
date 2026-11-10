@@ -8,7 +8,6 @@ from utilidades.constantes import CARPETA_REPORTES
 
 
 def generar_pdf(titulo, encabezados, filas, nombre_archivo, filtros_txt=""):
-    """Crea un PDF tabular y devuelve la ruta."""
     os.makedirs(CARPETA_REPORTES, exist_ok=True)
     ruta = os.path.join(CARPETA_REPORTES, f"{nombre_archivo}_{datetime.now():%Y%m%d_%H%M%S}.pdf")
     doc = SimpleDocTemplate(ruta, pagesize=landscape(A4))
